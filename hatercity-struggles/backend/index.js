@@ -31,9 +31,9 @@ app.use('/api/post', postRoutes)
 
 
 
-// func listen on 4000 port 
+// func listen on 5000 port 
 const startServer = () => {
-    const port = process.env.PORT || 4000 
+    const port = process.env.PORT || 5000 
     app.listen(port, () => {
         console.log('Server listening on port', port)
     })
