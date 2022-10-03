@@ -1,0 +1,42 @@
+/* Edit Profile Page Styles */
+@mixin edit-profile {
+    width: 100vw;
+    height: 100vh;
+    padding: 6rem 4rem 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        margin-bottom: 20px;
+    }
+    .edit-profile-section {
+        width: 90%;
+        max-width: 600px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    label {
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+    }
+    input { 
+        @include inputs; 
+        width: 60%;
+    }
+    textarea { 
+        @include inputs;
+        width: 100%;
+        max-width: 600px;
+        height: 30vh;
+        resize: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .edit-btn {
+        margin-top: 10px;
+        font-size: 1.3rem;
+        padding: 0.5rem 2rem;
+    }
+}

@@ -1,0 +1,187 @@
+/* Hidden Sidebar Styles */
+.hidden-sidebar {
+    position:fixed;
+    left: -100%;
+    opacity: 30%;
+    z-index: 1000;
+    transition: opacity .6s ease;
+    user-select: none;
+
+    &:hover {
+        opacity: 60%;
+    }
+}
+
+/* Button Which Opens The Sidebar Styles */ 
+.opt {
+    position: fixed;
+    left: 3.5%;
+    width:2rem;
+    z-index: 1000;
+    top: 6.5rem;
+    user-select: none;
+
+    &:hover {
+        cursor:pointer;
+        opacity: 80%;
+    }
+}
+
+
+.sidebar-opt {
+    left: 23%;
+}
+
+/* Sidebar Styles */
+@mixin sidebar {
+    margin-top: -6rem;
+    position:fixed;
+    box-shadow: $base-box-shadow;
+    border: 1px solid $primary-hot-color;
+    border-top:0;
+    z-index: 999;
+    max-width: 400px;
+    min-width: 170px;
+    width: 30%;
+    height: 120vh;
+    opacity: 97%;
+    left: 0;
+
+    display:flex;
+    flex-direction: column;
+
+    padding:10px;
+    padding-top: 6rem;
+    transition: left 0.1s ease-in-out;
+    
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 7px;
+        overflow: hidden;
+        border-bottom: 1px solid $card-hot-color;
+        .username {
+            color: $card-hot-color;
+            padding:0;
+            margin-top:15px;
+            text-overflow: ellipsis;            
+        }
+        .profile-img {
+            width: 4rem;
+            height: 4rem;
+        }
+        .profile-img:hover {
+            opacity:90%;
+            cursor:pointer;
+        }
+    }
+    img { user-select: none; }
+    button {
+        margin-top: 15px;
+        margin-left: 20px;
+        border: 0;
+        font-size: 1rem;
+        text-align: left;
+        background-color: transparent;
+        &:hover {
+            cursor: pointer;
+            opacity: 80%;
+        }
+    }
+}
+
+/* Options In The Sidebar Styles */
+.options {
+    display:flex;
+    flex-direction: column;
+    padding: 30px 5px;
+    border-bottom: 1px solid $card-hot-color;
+   
+    .options-section {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .options-img {
+            width: 3rem;
+            height: 3rem;
+        }
+        .option {
+            text-overflow: ellipsis;
+            margin-left: 15px;
+        }
+        .option:hover {
+            cursor: pointer;
+            opacity: 80%;
+        }
+    } 
+}
+
+
+/* ---- ANIMATIONS ---- */
+  .rotate-in-2-cw {
+	-webkit-animation: rotate-in-2-cw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-in-2-cw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.rotate-in-2-ccw {
+	-webkit-animation: rotate-in-2-ccw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-in-2-ccw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+  @-webkit-keyframes rotate-in-2-cw {
+    0% {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  @keyframes rotate-in-2-cw {
+    0% {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+
+  @-webkit-keyframes rotate-in-2-ccw {
+    0% {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  @keyframes rotate-in-2-ccw {
+    0% {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  

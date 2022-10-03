@@ -1,0 +1,61 @@
+/* UTILITIES */
+
+/* font-family: 'El Messiri', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500&display=swap');
+/* font-family: 'Source Sans Pro', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap');
+
+.input-length {
+    margin-top: 10px;
+}
+
+.show-more-arrow, .visibility {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: 'El Messiri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .05s ease;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.hidden-add-post-section {
+    display:none;
+}
+
+.container {
+    width:100vw;
+    overflow-x: hidden;
+}
+
+@media(max-width: 475px) {
+    .carousel, .main-slide {
+        width: 200px;
+        height: 200px;
+    }
+    .follow-btn-hot {
+        font-size: 10px;
+        width: 100px;
+    }
+}
+
+@media(max-width: 390px) {
+    body { display: none; }
+}

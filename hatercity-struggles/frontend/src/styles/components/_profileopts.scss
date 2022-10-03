@@ -1,0 +1,20 @@
+/* Options On the Profile Page Styles */
+@mixin profile-opts {
+    width:100vw;
+    display: flex;
+    border:0;
+    .profile-option, .profile-option-chosen {
+        width:33.333333333333333333%;
+        user-select: none;
+ 
+        border-top: 0.5px solid black;
+        border-left: 0.5px solid black;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        transition: all .2s ease;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

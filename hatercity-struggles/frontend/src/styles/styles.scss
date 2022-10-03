@@ -1,0 +1,39 @@
+// color pallete
+@import 'variables';
+
+// utilities: *, body etc.
+@import "utils";
+
+// components (navbar, btn, form, sidebar, post, search bar, add post component, diary posts component,
+// profile options, posts of users the current user is subscribed on, click hate statistics,
+// )
+@import './components/navbar.scss';
+@import './components/btn.scss';
+@import './components/form.scss';
+@import './components/sidebar.scss';
+@import './components/post.scss';
+@import './components/searchbar.scss';
+@import './components/addpost.scss';
+@import './components/diary.scss';
+@import './components/profileopts.scss';
+@import './components/clickhatestats.scss';
+
+// pages (home page, single post, settings, support, edit profile, followers list, click hate rating,
+// forgot password, profile images shop, profile, click hate page,
+// )
+@import './pages/home.scss';
+@import './pages/singlepost.scss';
+@import './pages/settings.scss';
+@import './pages/support.scss';
+@import './pages/editprofile';
+@import './pages/followlist';
+@import './pages/clickhaterating';
+@import './pages/forgotpassword';
+@import './pages/shop.scss';
+@import './pages/profile.scss';
+@import './components/subposts';
+@import './pages/clickhate.scss';
+
+// components depending on the selected mode
+@import './coldmode.scss';
+@import './hotmode.scss';

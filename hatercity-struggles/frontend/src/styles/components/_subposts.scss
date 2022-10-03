@@ -1,0 +1,8 @@
+/* THe Styles Of The Page Where The Current User's Subscribes' Posts Are Displayed */
+@mixin sub {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    .post-section { 
+        margin: 0; 
+    } 
+}

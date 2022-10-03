@@ -1,0 +1,320 @@
+/***** COLD MODE *****/
+
+.app-cold {
+    height: 100vh;
+    background-color: $bg-cold-color;
+    // home page in cold mode
+    .home-page {
+        @include home;
+        background-color: $bg-cold-color;
+        a {
+            color: $navy-cold;
+        }
+    }
+    // add post cimponent in cold mode
+    .add-post-section {
+        @include add-post;
+        color: $deep-blue-cold;
+        .add-post--text {
+            color: $primary-cold-color;
+        }
+        .icon-bg:hover {
+            background-color: $navy-cold;
+        }
+        .post-btn:hover {
+            background-color: $navy-cold;
+        }
+    }
+    // diary posts component in cold mode
+    .diary-posts { 
+        @include diary;
+        background-color: $bg-cold-color; 
+    }
+    // profile page in the cold mode
+    .profile {
+        @include profile-mixin;
+        background-color: $bg-deep-cold-color;
+        color: $navy-cold;
+        .profile-img { background-color: $bg-deep-cold-color; }
+        .profile-bg-img { background-color: $text-cold; } 
+        .user-info-prof {
+            border-bottom: 1px solid $primary-cold-color;
+            border-top: 1px solid $primary-cold-color;
+            .span {
+                color: $navy-cold;
+                &:hover {
+                    color: $text-cold;
+                }
+            }
+        }
+    }
+
+    // options on the user's profile page in cold mode
+    .profile-options {
+        @include profile-opts;
+        background-color: $bg-deep-cold-color;
+        color: $navy-cold;
+        .profile-option:hover {
+            background-color: #2a262e;
+        }
+        .profile-option-chosen {
+            background-color: #2a262e;
+        }
+    }
+
+    // subscribes posts in cold mode
+    .sub-posts {
+        @include sub;
+        background-color: $bg-cold-color;
+    }
+
+    // click hate statistics component in cold mode
+    .click-hate-statistics {
+        @include click-hate-statistics;
+        color: $navy-cold;
+    }   
+    
+    // click hate page in cold mode
+    .click-hate {
+        @include click-hates;
+        color: $navy-cold;
+    }
+
+    // support page in cold mode
+    .support {
+        @include support-mixin;
+        color: $text-cold;
+    
+        h1 { color: rgb(192, 194, 234);} 
+    
+        .content-header {
+            color: rgb(192, 194, 234);
+        }
+        .support-question {
+            border: 1px solid #5a59a3c4;
+            h4 {
+                color: rgb(192, 194, 234);
+                border-bottom: 1px solid #5a59a362;
+                padding: 10px 20px;
+            }
+        }
+        .support-content {
+            padding: 20px 0;
+            border-top: 1px solid #5a59a362;
+            border-bottom: 1px solid #5a59a362;
+        }
+        a {
+            color: $text-cold;
+            transition: color .2s ease;
+            &:hover {
+                color:rgb(192, 194, 234);
+            }
+        }
+    }
+
+
+    // single post page in cold mode
+    .single-post-page {
+        @include single-post-page-mixin;
+        background-color: $bg-cold-color;
+        .comment-header {
+            color: $deep-blue-cold;
+        }
+        a {
+            color: $navy-cold;
+        }
+        .delete-comment {
+            color: $navy-cold;
+        }
+    }
+
+    // profile images shop in cold mode
+    .shop-images-container {
+        @include shop-imgs-container;
+        background-color: $bg-cold-color;
+        color: $text-cold;
+    }
+    
+    .shop-images {
+        @include shop-imgs;
+        background-color: $bg-cold-color;
+        h3 {
+            opacity: 0.85;
+        }
+    }
+
+    // settings page in cold mode
+    .settings {
+        @include settings;
+        color: #bbbfcd;
+        h1 {
+            border-top: 1px solid $navy-cold;
+        }
+        .settings-section {
+            border: 1px solid $navy-cold;
+        }
+        h3 {
+            color: $navy-cold;
+            border-bottom: 1px solid $navy-cold;
+        }
+        span { color: $navy-cold; }
+        button {
+            color: $navy-cold;
+            border: 1px solid $navy-cold;
+        }
+        a {
+            transition: color .2s ease;
+            color: #bbbfcd;
+            &:hover { color: $navy-cold; }
+        }
+    }
+
+    // forgot password page in cold mode
+    .forgot-password {
+        @include forgot-password;
+        color: $navy-cold;
+        a { 
+            color: $navy-cold; 
+            transition: opacity .2s ease-in-out;
+            opacity: 0.8; 
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    // followers & following list pages in cold mode
+    .follow-list {
+        @include list;
+        background-color: $bg-cold-color;
+        color: $navy-cold;
+        a { color: $navy-cold; }
+        p { opacity: 0.8; }
+    }
+
+    // edit profile page in cold mode
+    .edit-profile {
+        @include edit-profile;
+        background-color: $bg-cold-color;
+        color: #b2b1fdc3;
+        h1 {
+            color: #f4f4fafb;
+        }
+    }
+
+    // click hate rating page in cold mode
+    .click-hate-rating {
+        @include click-hate-rating;
+        color: $text-cold;
+        a {
+            color: $card-bg-hot-color;
+            opacity: 0.8;
+            transition: opacity .2s ease;
+            &:hover {
+                opacity: 0.95;
+            }
+        }
+        .winner {
+            border: 1px solid #5a59a39d;
+        }
+        .click-hate-card {
+            border: 1px solid #5a59a39d;
+        }
+    }
+
+    // sidebar in cold mode
+    .sidebar {
+        @include sidebar;
+        background-color: rgba(12, 12, 12, 0.86);
+        button {
+            color: $navy-cold;
+        }
+        a {
+            color: $navy-cold;
+        }
+    }
+
+    // post section in cold mode
+    .post-section {
+        @include post-section;
+        background-color: $bg-cold-color;
+    }
+
+    // single post in cold mode
+    .card {
+        @include card;
+        color: $navy-cold;
+        .show {
+            color: $deep-blue-cold;
+        }
+        a {
+            color: $navy-cold;
+        }
+        .liked {
+            color: $card-bg-hot-color;
+            background-color: $text-cold;
+        }
+    }
+
+    // navbar in cold mode
+    .navbar {
+        @include navbar;
+        background-color: $primary-cold-color;
+        .title {
+            color: $text-cold;
+        }
+        .question  {
+            color: $text-cold;
+        }
+    }
+
+    // sign up page in cold mode
+    .signup {
+        @include signup;
+        color: $text-cold;
+        background-color: $bg-cold-color;
+        .form-btn {
+            background-color: $text-cold;
+            &:hover {
+                background-color: $deep-blue-cold;
+                color: rgba(255, 255, 255, 0.893);
+            }
+        }
+    }
+
+    // log in page in cold mode
+    .login {
+        @include login;
+        color: $text-cold;
+        background-color: $bg-cold-color;
+        a {
+            color: $text-cold;
+        }
+        .form-btn {
+            background-color: $text-cold;
+            &:hover {
+                background-color: $deep-blue-cold;
+                color: rgba(255, 255, 255, 0.893);
+            }
+        }
+    }
+
+    // base follow button in cold mode
+    .follow-btn {
+        @include follow-btn;
+        color: $text-cold;
+        border: 1px solid $text-cold;
+        &:hover {
+            background-color: $text-cold;
+            color: white;
+        }
+    }
+
+    // add post button in cold mode
+    .add-post-btn {
+        @include add-post-btn;
+        background-color: $navy-cold;
+        color: #d2d1d1;
+    }
+
+}

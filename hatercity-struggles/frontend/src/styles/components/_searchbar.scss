@@ -1,0 +1,38 @@
+/* Searchbar Styles */
+.search-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 10px 20px 40px;
+    width: 100%;
+    z-index: 0;
+    div {
+        position: relative;
+        width: 80%;
+        
+        input {
+            @include inputs;
+            height: 2rem;
+            width: 100%;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.778);
+            color: black;
+            transition: background-color .2s ease;
+            padding: 1.2rem 1rem;
+            &:focus {
+                background-color: rgba(255, 255, 255, 0.895);
+            }
+        }
+    }
+    span {
+        position: absolute;
+        color: gray;
+        top: 4px;
+        right: 8px;
+        user-select: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

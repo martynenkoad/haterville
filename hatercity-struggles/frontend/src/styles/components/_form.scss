@@ -1,0 +1,157 @@
+/* Input Styles */
+@mixin inputs {
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 8px;
+    border:0;
+    outline:0;
+    transition: transform 0.25s ease;
+
+    &:hover {
+        cursor: text;
+    }
+
+    &:focus {
+        transform: scale(98.5%);
+    }
+}
+
+
+
+/* Basic Form styles */
+@mixin form {
+    background-color: $primary-hot-color;
+    display:flex;
+    flex-direction: column;
+    padding: 4rem 8rem;
+    align-items: center;
+
+    .form-input {
+        @include inputs;
+        width: 80%;
+        max-width: 600px;
+        margin-bottom: 1.3rem;
+    }
+
+    .form-btn {
+        @include mixin-btn;
+        width: 9rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+
+    }
+}  
+
+/* Profile Images Styles */
+@mixin sign-up-image {
+    user-select: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.form-welcome-text {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 3px;    
+}
+
+/* Sign Up Form Styles */
+@mixin signup {
+    @include form;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 5rem 2rem;
+    .form-welcome-text {
+        margin-top: 3rem;
+    }
+    span {
+        margin-left: 10px;
+    }
+
+    .sign-up-text {
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .sign-up-images {
+        padding:1rem 4rem;
+        width:100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .signup-img {
+            @include sign-up-image;
+            opacity:50%;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                opacity: 85%;
+            }      
+        }
+    }
+    .chosen-img {
+        @include sign-up-image;
+        opacity: 100%;
+    }
+    .sign-up-description {
+        @include inputs;
+        width: 70%;
+        max-width: 580px;
+        height: 20vh;
+        resize: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .form-btn {
+        margin-top: 3rem;
+    }
+    .error {
+        margin-top: 20px;
+    }
+}
+
+/* Log in form styles */
+@mixin login {
+    @include form;
+    height: 100vh;
+    width: 100vw;
+    
+    .form-text {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        a {
+            letter-spacing: 0.5px;
+            &::after {
+                content: " →";  
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .visibility:hover {
+        cursor: pointer;
+    }
+    .error {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+
+/* Click hate form styles */
+
+.click-hate-form {
+    @include form;
+}

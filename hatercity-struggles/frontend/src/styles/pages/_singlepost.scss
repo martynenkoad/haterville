@@ -1,0 +1,73 @@
+/* Single Post Page Styles */
+@mixin single-post-page-mixin {
+    width: 100vw;
+    height: 100vh;
+    display:flex; 
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+
+    a { color: black; }
+
+    .delete-post, .show {
+        display: none;
+    }
+
+    .comment-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .comment-section {
+        border-top: 1px solid grey;
+        background-color: $card-bg-hot-color;
+        width: 80%;
+        margin-top: -12px;
+        padding: 2rem 1.2rem;
+        .show-more-arrow {
+            cursor: pointer;
+            user-select: none;
+        }
+        .single-comment {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .comment-user {
+                &::before {
+                    content: "@";
+                }
+            }
+
+            .single-comment-part { display: flex; }
+            
+            .delete-comment {
+                user-select: none;
+                opacity: 0;
+                transition: opacity .2s ease;
+            }
+            &:hover {
+                .delete-comment {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+
+            div { margin-left: 20px; }
+
+            .comment-text {
+                font-size: .8rem;
+                margin-left: 8px;
+                overflow:visible;
+                display:block;
+                width: 40vw;
+                max-width: 500px;
+                white-space: pre-wrap;    
+                word-wrap: break-word;    
+            }
+
+        }
+    }
+}

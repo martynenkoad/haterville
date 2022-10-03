@@ -1,0 +1,8 @@
+/* Home Page Styles */
+@mixin home {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-top: 6rem;
+    align-items: center;
+}

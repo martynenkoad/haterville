@@ -1,0 +1,323 @@
+/***** HOT MODE *****/
+
+.app-hot {
+    height: 100vh;
+    background-color: $bg-hot-color;
+    // home page in hot mode
+    .home-page {
+        @include home;
+        background-color: $bg-hot-color;
+        a {
+            color: $maroon-hot;
+        }
+    }
+
+    // add post component in hot mode
+    .add-post-section {
+        @include add-post;
+        color: $maroon-hot;
+        .add-post--text {
+            color: $primary-hot-color;
+        }
+        .icon-bg:hover {
+            background-color: $maroon-hot;
+        }
+        .post-btn:hover {
+            background-color: $maroon-hot;
+        }
+    }
+    // diary component in hot mode
+    .diary-posts { 
+        @include diary;
+        background-color: $bg-hot-color; 
+    }
+    // profile page in hot mode
+    .profile {
+        @include profile-mixin;
+        background-color: $sidebar-hot-color;
+        color: $text-hot;
+        .profile-img { background-color: $bg-hot-color; }
+        .profile-bg-img { background-color: $maroon-hot; }
+        .user-info-prof {
+            border-bottom: 1px solid $bg-secondary-hot-color;
+            border-top: 1px solid $bg-secondary-hot-color;
+            .span {
+                color: $text-hot;
+                &:hover {
+                    color: $red-hot;
+                }
+            }
+        }
+    } 
+
+    // options on the user's profile page in hot mode
+    .profile-options {
+        @include profile-opts;
+        background-color: $sidebar-hot-color;
+        color: $maroon-hot;
+        .profile-option:hover {
+            background-color: #1d1d1d;
+            color: #8a2d2d;
+        }
+        .profile-option-chosen {
+            background-color: #1d1d1d;
+            color: #8a2d2d;
+        }
+    }
+
+    // subscribes posts in hot mode
+    .sub-posts {
+        @include sub;
+        background-color: $bg-hot-color;
+    }
+
+    // click hate statistics in hot mode
+    .click-hate-statistics {
+        @include click-hate-statistics;
+        color: $maroon-hot;
+    } 
+
+    // click hate page in hot mode
+    .click-hate {
+        @include click-hates;
+        color: $maroon-hot;
+    }
+
+    // support page in hot mode
+    .support {
+        @include support-mixin;
+        color: rgba(234, 234, 234, 0.819);
+        h1 { color: $maroon-hot;} 
+    
+        .content-header {
+            color: $maroon-hot;
+        }
+        .support-question {
+            border: 1px solid #950101a5;
+            h4 {
+                color: $text-hot;
+                border-bottom: 1px solid #9501017b;
+                padding: 10px 20px;
+            }
+        }
+        .support-content {
+            padding: 20px 0;
+            border-top: 1px solid #9501017b;
+            border-bottom: 1px solid #9501017b;
+        }
+        a {
+            color: rgb(234, 234, 234, 0.819);
+            transition: color .2s ease;
+            &:hover {
+                color: $maroon-hot;
+            }
+        }
+    }
+    
+    // single post page in hot mode
+    .single-post-page {
+        @include single-post-page-mixin;
+        background-color: $bg-hot-color;
+        .comment-header {
+            color: $maroon-hot;
+        }
+        a {
+            color: $maroon-hot;
+        }
+        .delete-comment {
+            color: $maroon-hot;
+        }
+    }
+    
+    // profile images shop page in hot mode
+    .shop-images {
+        @include shop-imgs;
+        background-color: $bg-hot-color;
+        h3 {
+            color: $text-hot;
+            opacity: 0.85;
+        }
+    }
+    .shop-images-container {
+        @include shop-imgs-container;
+        background-color: $bg-hot-color;
+        color: $text-hot;
+    }
+
+    // settings page in hot mode
+    .settings {
+        @include settings;
+        color: rgb(202, 194, 194);
+        h2 {
+            color: $maroon-hot;
+        }
+        .settings-section {
+            border: 1px solid $maroon-hot;
+        }
+    
+        h3 {
+            color: $maroon-hot;
+        }
+    
+        span {
+            color: $maroon-hot;
+        }
+    
+        a {
+            color: rgb(202, 194, 194);
+            transition: color .2s ease;
+            &:hover {
+                color: $maroon-hot;
+            }
+        }
+    
+        h3 {
+            border-bottom: 1px solid $maroon-hot;
+        }
+    }
+
+    // forgot password page in hot mode
+    .forgot-password {
+        @include forgot-password;
+        color: $maroon-hot;
+        a { 
+            color: $maroon-hot; 
+            transition: opacity .2s ease-in-out;
+            opacity: 0.8; 
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    // followers & following list component in hot mode
+    .follow-list {
+        @include list;
+        background-color: $bg-hot-color;
+        color: $maroon-hot;
+        a { color: $maroon-hot; }
+        p { opacity: 0.8; }
+        .span { color: $maroon-hot; }
+    }
+
+    // edit profile page in hot mode
+    .edit-profile {
+        @include edit-profile;
+        background-color: $bg-hot-color;
+        color: $maroon-hot;
+    }
+
+    // click hate rating page in hot mode
+    .click-hate-rating {
+        @include click-hate-rating;
+        color: $text-hot;
+        a {
+            color: $text-hot;
+        }
+        .winner {
+            border: 1px solid $maroon-hot;
+        }
+        .click-hate-card {
+            border: 1px solid $maroon-hot;
+            p {
+                opacity: 0.95;
+            }
+        }
+    }
+
+    // sidebar in hot mode
+    .sidebar {
+        @include sidebar;
+        background-color: $sidebar-hot-color;
+        color: $maroon-hot;
+        button {
+            color: $maroon-hot;
+        }
+        a {
+            color: $maroon-hot;
+        }
+    }
+
+    // post section in hot mode
+    .post-section {
+        @include post-section;
+        background-color: $bg-hot-color;
+    }
+
+    // single post component in hot mode
+    .card {
+        @include card;
+        color: $maroon-hot;
+        .show {
+            color: $text-hot;
+        }
+        a {
+            color: $text-hot;
+        }
+        .liked {
+            color: $card-bg-hot-color;
+            background-color: $text-hot;
+        }
+    }
+
+    // navbar in hot mode
+    .navbar {
+        @include navbar;
+        background-color: $primary-hot-color;
+        .title {
+            color: $text-hot;
+        }
+        .question  {
+            color: $text-hot;
+        }
+    }
+
+    // sign up page in hot mode
+    .signup {
+        @include signup;
+        color: $maroon-hot;
+        .form-btn {
+            background-color: $text-hot;
+            &:hover {
+                background-color: #8a2d2d;
+                color: rgba(255, 255, 255, 0.893);
+            }
+        }
+    }
+
+    // log in page in hot mode
+    .login {
+        @include login;
+        color: $maroon-hot;
+        a {
+            color: $maroon-hot;
+        }
+        .form-btn {
+            background-color: $text-hot;
+            &:hover {
+                background-color: #8a2d2d;
+                color: rgba(255, 255, 255, 0.893);
+            }
+        }
+    }
+
+    // base follow button in hot mode
+    .follow-btn {
+        @include follow-btn;
+        color: $maroon-hot;
+        border: 1px solid $maroon-hot;
+        &:hover {
+            background-color: $maroon-hot;
+            color: $bg-hot-color;
+        }
+    }
+
+    // add post button in hot mode
+    .add-post-btn {
+        @include add-post-btn;
+        background-color: $maroon-hot;
+        color: $card-hot-color;
+        
+    }
+    
+}
