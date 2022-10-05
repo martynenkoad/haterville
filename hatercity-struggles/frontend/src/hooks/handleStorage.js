@@ -9,10 +9,6 @@ const handleStorage = {
 
     updateMode: (updates) => {
         localStorage.setItem("mode", updates)
-    },
-
-    getMode: () => {
-        localStorage.getItem("mode")
     }
 }
 

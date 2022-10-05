@@ -66,7 +66,7 @@ const callToBackend = {
     /**
      * Edit the user's profile
      * @param items 
-     */
+     */ 
     editProfile: async (items) => {
         const response = await makeCall("/user/update-user", "PUT", items)
         return response

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import imgData from "../data/imgData"
+import imgLib from "../data/imgData"
 import { useUserContext } from "../hooks/useUserContext"
 import ProfileImage from "../components/ProfileImage"
 import { Link } from "react-router-dom"
@@ -11,7 +11,7 @@ export default function ImageShop() {
     const { user, dispatch } = useUserContext()
 
     // States 
-    const [images, setImages] = useState(imgData)
+    const [images, setImages] = useState(imgLib.imgData)
     const [error, setError] = useState(null)
     const [showImage, setShowImage] = useState()
 
@@ -25,13 +25,13 @@ export default function ImageShop() {
                 return id === image.id ? {...image, isSelected: true} : {...image, isSelected: false}
             })
         })
-        setShowImage(imgData.find(img => img.id === id))
+        setShowImage(imgLib.imgData.find(img => img.id === id))
     }
 
     /**
      * Function to find the image chosen by the user
      */
-    const lockedHater = imgData.find(img => img.id === 0)
+    const lockedHater = imgLib.imgData.find(img => img.id === 0)
 
     /**
      * Function to set the unlocked images for the current user depending on their click-hate rating
@@ -54,7 +54,7 @@ export default function ImageShop() {
     const updateProfileImage = async () => {
         try {
             const profileImage = showImage.id
-            callToBackend.editProfile(profileImage)
+            callToBackend.editProfile({ profileImage })
               .then(data => {
                 dispatch({ type: "LOGIN", payload: data })
                 handleStorage.updateUser(data) 
@@ -63,7 +63,7 @@ export default function ImageShop() {
     }
 
     useEffect(() => {
-        setUnlocked()
+       setUnlocked()
     }, [])
 
     return (
@@ -83,7 +83,7 @@ export default function ImageShop() {
                               isSelected={singleImg.isSelected}
                               toggle={toggle}
                             />
-                            <p>{imgData[index].numOfClicks}</p>
+                            <p>{imgLib.imgData[index].numOfClicks}</p>
                           </div>
                       )        
                     }

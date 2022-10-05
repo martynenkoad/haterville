@@ -171,7 +171,7 @@ const updateUser = async (req, res) => {
     const { _id } = req.user
     const user = await User.findById(_id)
 
-    if(!user) {
+    if(!user) { 
         return res.status(404).json({ error: "How do you want to edit your profile if you do not exist? :(" })
     }
 
@@ -180,7 +180,7 @@ const updateUser = async (req, res) => {
     user.firstName = items.firstName || user.firstName
     user.lastName = items.lastName || user.lastName
     user.email = items.email || user.email
-    user.profileImage = items || user.profileImage
+    user.profileImage = items.profileImage || user.profileImage
     user.description = items.description || user.description
 
     const updated = await user.save()

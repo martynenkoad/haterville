@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import ProfileImage from "../components/ProfileImage"
-import imgData from "../data/imgData"
+import imgLib from "../data/imgData"
 import { useSignup } from "../hooks/useSignup"
 
 
@@ -16,7 +16,7 @@ export default function Signup() {
     const [password, setPassword] = useState("")
     const [profileImage, setProfileImage] = useState(0)
     const [description, setDescription] = useState("")
-    const [images, setImages] = useState(imgData)
+    const [images, setImages] = useState(imgLib.imgData)
     const [visible, setVisible] = useState(false)
     
     /**
@@ -25,6 +25,7 @@ export default function Signup() {
      */
     function toggle(id) {
         setImages(prevImages => {
+            console.log(prevImages)
             return prevImages.map((image) => {
                 return id === image.id ? {...image, isSelected: true} : {...image, isSelected: false}
             })

@@ -5,7 +5,7 @@ import defaultSettings from "./defaultSettings"
  * @param {string} url 
  * @param {string} method 
  * @param items 
- * @param {boolean} isAuth 
+ * @param {boolean} isAuth  
  * @param {string} token 
  */
 const makeCall = async (url, method, items, isAuth = true, token = "") => {

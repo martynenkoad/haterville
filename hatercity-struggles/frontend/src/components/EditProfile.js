@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useUserContext } from "../hooks/useUserContext"
 import { useNavigate } from "react-router-dom"
 import callToBackend from "../lib/api/api"
+import handleStorage from "../hooks/handleStorage"
 
 export default function EditProfile() {
     // Context
@@ -21,10 +22,12 @@ export default function EditProfile() {
      */
     const handleSubmit = async (e) => {
         e.preventDefault() 
-        try {
+        try { 
           callToBackend.editProfile({ firstName, lastName, email, description })
             .then(data => {
+              console.log(data)
               dispatch({ type: 'LOGIN', payload: data })
+              handleStorage.updateUser(data)
               navigate("/")
             })
         } catch (error) { setError(error) }

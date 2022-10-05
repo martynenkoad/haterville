@@ -30,7 +30,7 @@ router.post('/signup', signUpUser)
  * 4. forgot password route
  * 5. reset password route
  * 6. update user's click-hate rating
- */
+ */ 
 router.get('/get-user/:id', useAuth, getUser) 
 router.get('/rating', useAuth, getRating)
 router.put('/follow/:id', useAuth, followUser) 

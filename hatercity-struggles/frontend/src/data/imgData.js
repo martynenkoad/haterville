@@ -18,6 +18,7 @@ import pumpkinHater from "../img/pumpkinHater.png"
 import flowerHater from "../img/flowerHater.png"
 import lockedHater from "../img/lockedHater.png"
 
+
 const imgData = [ 
     {
         id: 1,
@@ -204,10 +205,12 @@ const imgData = [
 ]
 
 
-export default { 
+const imgLib = {
     imgData,
     findImage: (imageid) => {
-        const img = imgData.find(image => image.id === imageid)
-        return img.image
+        const found = imgData.find(img => img.id === imageid)
+        return found.image
     } 
 }
+
+export default imgLib

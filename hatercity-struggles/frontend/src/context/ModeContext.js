@@ -9,10 +9,10 @@ export const ModeContextProvider = ({ children }) => {
     const toggleMode = () => {
         setColdMode(!coldMode)
         handleStorage.updateMode(coldMode ? "cold" : "hot")
-    }
+    } 
 
     useEffect(() => {
-        setColdMode(handleStorage.getMode() === "cold" ? false : true)
+        setColdMode(localStorage.getItem("mode") === "cold" ? false : true)
     }, [])
 
     return (
