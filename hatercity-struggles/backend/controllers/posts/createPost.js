@@ -34,13 +34,13 @@ const getData = (req) => {
     })
 
     form.on('file', (fieldName, file, fileName) => {
-      buffers[fieldName] = []
+      buffers[fileName] = []
       file.on('data', (data) => {
-        buffers[fieldName].push(data)
+        buffers[fileName].push(data)
       })
       file.on('end', () => {
         files.push({
-          fileBuffer: Buffer.concat(buffers[fieldName]),
+          fileBuffer: Buffer.concat(buffers[fileName]),
           fieldName,
           fileName
         })

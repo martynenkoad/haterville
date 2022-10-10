@@ -10,12 +10,9 @@ const {
   commentPost,
   deleteComment
 } = require('@/controllers/postController')
+
 const { createPost } = require('@/controllers/posts/createPost')
-
-// const busboy = require('connect-busboy')
 const router = express.Router()
-
-// const bufferSize = 2097152 // 2 MiB
 
 router.use(useAuth)
 
@@ -26,7 +23,7 @@ router.get('/subposts/:id', getSubPosts)
 // get single post
 router.get('/:id', getPost)
 // create a post /* CHECK IT */
-router.post('/', /*busboy({ highWaterMark: bufferSize }), */ createPost)
+router.post('/', createPost)
 // delete the post
 router.delete('/:id', deletePost)
 // like the post

@@ -12,13 +12,11 @@ const path = require('path')
  * @param res
  */
 const getPosts = async (req, res) => {
-
   await Post.find({}).sort({ createdAt: -1 })
     .populate('comments.commentator', '_id firstName lastName username email profileImage description hates followers following clickHate')
     .populate('postedBy', '_id firstName lastName username email profileImage description hates followers following clickHate')
     .then(allPosts => res.status(200).json(allPosts))
     .catch(error => res.status(400).json({ error: error.message }))
-
 }
 
 /**
