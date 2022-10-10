@@ -107,8 +107,6 @@ const savePostToDatabase = async ({ fields, uploadedFiles, postedBy }) => {
     images: uploadedFiles
   }
 
-  console.log('creating post')
-  console.log(newPost)
   return Post.create(newPost)
 }
 
