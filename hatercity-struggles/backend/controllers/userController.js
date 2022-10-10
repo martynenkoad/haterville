@@ -224,7 +224,7 @@ const forgotPassword = async (req, res) => {
  
         // send email with the link
         // CHANGE LATER WITH THE DOMAIN NAME
-        const url = `http://localhost:3000/passwordrecovery/${accessToken}`
+        const url = `http://haterville.qamachine.com/passwordrecovery/${accessToken}`
 
         const name = user.username
         const options = {

@@ -11,6 +11,7 @@ const {
     commentPost,
     deleteComment
 } = require('../controllers/postController')
+const busboy = require("connect-busboy")
 
 const router = express.Router()
 
@@ -22,8 +23,8 @@ router.get('/', getPosts)
 router.get('/subposts/:id', getSubPosts) 
 // get single post
 router.get('/:id', getPost) 
-// create a post
-router.post('/', createPost)
+// create a post /* CHECK IT */
+router.post('/', busboy({ highWaterMark: 2 * 1024 * 1024 }), createPost)
 // delete the post
 router.delete('/:id', deletePost)
 // like the post

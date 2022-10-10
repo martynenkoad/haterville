@@ -62,8 +62,8 @@ export default function Login() {
                 Registration
               </Link>
             </div>
+	   {error &&  <div className="error">{error.message}</div>}
 
-            {error && <div className="error">{error}</div>}
         </form>
       </div>
     )

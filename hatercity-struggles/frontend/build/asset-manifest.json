@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa357e50.css",
+    "main.js": "/static/js/main.0b000018.js",
+    "static/media/flowerHater.png": "/static/media/flowerHater.c28fedb8c8c8cf3eb11b.png",
+    "static/media/gentelmanHater.png": "/static/media/gentelmanHater.8a9fc67ef8169b6d8a07.png",
+    "static/media/pumpkinHater.png": "/static/media/pumpkinHater.bb98ef37699eec553ddd.png",
+    "static/media/cyclopeHater.png": "/static/media/cyclopeHater.5a5eba4f72c06fb2f168.png",
+    "static/media/coolHater.png": "/static/media/coolHater.bd85065ae92fd31cef76.png",
+    "static/media/emoHater.png": "/static/media/emoHater.2bcda5a64249d5db6a3e.png",
+    "static/media/fallenInLoveHater.png": "/static/media/fallenInLoveHater.be43764f9972e0f76e80.png",
+    "static/media/ukrHater.png": "/static/media/ukrHater.cbd51c78c12808a52301.png",
+    "static/media/kingHater.png": "/static/media/kingHater.db2e2d98c1d4e860286c.png",
+    "static/media/sunHater.png": "/static/media/sunHater.ad0320b7d139d364d70c.png",
+    "static/media/alienHater.png": "/static/media/alienHater.8b1520d578f7d953ecc8.png",
+    "static/media/lockedHater.png": "/static/media/lockedHater.b7f1301377d7717cea05.png",
+    "static/media/settings.png": "/static/media/settings.9c32f9fa2a955268c620.png",
+    "static/media/muchachaHater.png": "/static/media/muchachaHater.d2913117023437e622ab.png",
+    "static/media/standartHater.png": "/static/media/standartHater.8c24cea9d70645b4bc6d.png",
+    "static/media/catHater.png": "/static/media/catHater.897bb024182e8ff31741.png",
+    "static/media/angelHater.png": "/static/media/angelHater.fc4c20d5d5c6fa01c210.png",
+    "static/media/granddadHater.png": "/static/media/granddadHater.7fa20c66dd4e8bbc34a0.png",
+    "static/media/cockHater.png": "/static/media/cockHater.affc420ac985f94cf095.png",
+    "index.html": "/index.html",
+    "main.fa357e50.css.map": "/static/css/main.fa357e50.css.map",
+    "main.0b000018.js.map": "/static/js/main.0b000018.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa357e50.css",
+    "static/js/main.0b000018.js"
+  ]
+}

@@ -2,6 +2,9 @@ const mongoose = require('mongoose')
 const cloudinary = require('../utils/cloudinary')
 const Post = require('../models/postModel')
 const User = require("../models/userModel")
+const fs = require("fs-extra")
+const busboy = require("connect-busboy")
+const path = require("path")
 
 /**
  * Get all posts
@@ -62,18 +65,42 @@ const getPost = async (req, res) => {
  * @param res 
  */
 const createPost = async (req, res) => {
+    console.log('createPost')
+
+    req.pipe(req.busboy)
+    req.busboy.on('file', (fieldName, file, filename) => {
+        console.log('fieldName:', fieldName)
+        console.log('file: ', file)
+        console.log('filename:', filename)
+    })
+
+    return
+
     try {
         const { postText } = req.body.items
         let images = req.body.items.images
-        
+
+        req.pipe(req.busboy)
+
         let imagesBuffer = []
+        console.log('Uploading images:', images.length)
         for(let i = 0; i < images.length; i++) {
+            console.log('image:', i, ', size: ', images[i].length)
+            // req.busboy.on("file", (fieldname, file, filename) => {
+            //     console.log(`Upload on ${filename}....`)
+            //
+            //     const fstream = fs.createWriteStream(path.join(uploadPath, filename))
+            //     file.pipe(fstream)
+            // })
             const result = await cloudinary.uploader.upload(images[i], {
                 folder: process.env.CLOUDINARY_FOLDER,
                 width: 200,
                 crop: 'fill',
                 height: 200
             })
+
+            console.log('Response from Cloudinary:')
+	        console.log(result)
 
             imagesBuffer.push({
                 public_id: result.public_id,
@@ -91,6 +118,7 @@ const createPost = async (req, res) => {
         
         res.status(200).json(post)
     } catch (error) {
+        console.log('Error:', error.message)
         res.status(400).json({ error: error.message })
     }
 }

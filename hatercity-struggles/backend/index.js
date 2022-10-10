@@ -11,10 +11,9 @@ const initMongo = require('./lib/init-mongo')
 
 const app = express()
 
-// parse json
-app.use(express.json({ limit: '50mb' }))
-
-app.use(express.urlencoded({ extended: true, limit: '50mb' }))
+// parse jon
+app.use(express.json({ limit: '150mb' }))
+app.use(express.urlencoded({ extended: true, limit: '150mb', parameterLimit: 500000 }))
 
 // deal with cross origin policy
 app.use(

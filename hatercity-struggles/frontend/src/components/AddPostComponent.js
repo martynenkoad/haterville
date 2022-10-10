@@ -64,7 +64,7 @@ export default function AddPostComponent(props) {
           return [URL.createObjectURL(file), ...prevImages].slice(0, 4)
         })
         const reader = new FileReader()
-        reader.readAsDataURL(file)
+        reader.readAsBinaryString(file)
         reader.onloadend = () => {
           setImages(oldArray => [reader.result, ...oldArray].slice(0, 4))
         }
@@ -86,6 +86,7 @@ export default function AddPostComponent(props) {
       
 
       try {        
+	    console.log(images)
         const data = { postText, images }
         callToBackend.createPost(data)
         setIsLoading(false)
