@@ -1,4 +1,6 @@
 require('dotenv').config()
+require('module-alias/register')
+
 const express = require('express')
 const cors = require('cors')
 
@@ -17,58 +19,23 @@ app.use(express.urlencoded({ extended: true, limit: '150mb', parameterLimit: 500
 
 // deal with cross origin policy
 app.use(
-    cors({
-        origin: '*'
-    })
+  cors({
+    origin: '*'
+  })
 )
-
 
 // auth routes
 app.use('/api/user', userRoutes)
 // post routes
 app.use('/api/post', postRoutes)
 
-
-
-// func listen on 5000 port 
+// func listen on 5000 port
 const startServer = () => {
-    const port = process.env.PORT || 5000 
-    app.listen(port, () => {
-        console.log('Server listening on port', port)
-    })
+  const port = process.env.PORT || 5000
+  app.listen(port, () => {
+    console.log('Server listening on port', port)
+  })
 }
 
 // connect to mongo db & listen on 4000 port
 initMongo(app, startServer)
-
-
-
-
-
-
-
-
-
-
-
-
-//const storage = multer.diskStorage({
-//     destination: (req, file, callback) => {
-//         callback(null, "./images")
-//     },
-//     filename: (req, file, callback) => {
-//         callback(null, Date.now() + "--" + path.extname(file.originalname))
-//     }
-// })
-
-// const upload = multer({ storage })
-
-// app.use('/api/upload/single', upload.single('image'), (req, res) => {
-//     console.log(req.file)
-//     res.send('Single image uploaded')
-// })
-
-// app.use('/api/upload/multiple', upload.array('images', 4), (req, res) => {
-//     console.log(req.files)
-//     res.send('Many images uploaded')
-// })
