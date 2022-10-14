@@ -54,11 +54,6 @@ button {
     width: 100px;
   }
 }
-@media (max-width: 390px) {
-  body {
-    // display: none;
-  }
-}
 /* Navbar (Header) Styles */ /* Basic Button */
 /* Basic Button With Additional Styles */
 /* Add Post Button */
@@ -149,6 +144,11 @@ button {
   text-align: center;
   letter-spacing: 3px;
 }
+@media (max-width: 390px) {
+  .form-welcome-text {
+    font-size: 0.8rem;
+  }
+}
 
 /* Sign Up Form Styles */
 /* Log in form styles */
@@ -169,6 +169,7 @@ button {
   transition: transform 0.25s ease;
   width: 80%;
   max-width: 600px;
+  min-width: 180px;
   margin-bottom: 1.3rem;
 }
 .click-hate-form .form-input:hover {
@@ -176,6 +177,11 @@ button {
 }
 .click-hate-form .form-input:focus {
   transform: scale(98.5%);
+}
+@media (max-width: 390px) {
+  .click-hate-form .form-input {
+    width: 200px;
+  }
 }
 .click-hate-form .form-btn {
   border: 0;
@@ -194,6 +200,11 @@ button {
 }
 .click-hate-form .form-btn:active {
   transform: scale(95%);
+}
+@media (max-width: 390px) {
+  .click-hate-form {
+    padding-top: 1rem;
+  }
 }
 
 /* Hidden Sidebar Styles */
@@ -231,6 +242,11 @@ button {
 
 .sidebar-opt {
   left: 23%;
+}
+@media (max-width: 390px) {
+  .sidebar-opt {
+    left: 35%;
+  }
 }
 
 /* Sidebar Styles */
@@ -492,6 +508,8 @@ button {
   padding-bottom: 20px;
   padding-top: 6rem;
   align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: #302e35;
 }
 .app-cold .home-page a {
@@ -679,6 +697,11 @@ button {
 .app-cold .profile .user-info-prof .span:hover {
   cursor: pointer;
 }
+@media (max-width: 390px) {
+  .app-cold .profile .user-info-prof {
+    font-size: 0.7rem;
+  }
+}
 .app-cold .profile .profile-img {
   background-color: #1f1d22;
 }
@@ -717,6 +740,11 @@ button {
 }
 .app-cold .profile-options .profile-option:hover, .app-cold .profile-options .profile-option-chosen:hover {
   cursor: pointer;
+}
+@media (max-width: 390px) {
+  .app-cold .profile-options {
+    font-size: 0.7rem;
+  }
 }
 .app-cold .profile-options .profile-option:hover {
   background-color: #2a262e;
@@ -794,6 +822,12 @@ button {
   width: 100%;
   max-width: 1200px;
 }
+@media (max-width: 390px) {
+  .app-cold .support .support-content {
+    margin-left: -2rem;
+    align-items: center;
+  }
+}
 .app-cold .support .support-content .content-header {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -812,6 +846,12 @@ button {
   text-align: left;
   margin-left: 40px;
 }
+@media (max-width: 390px) {
+  .app-cold .support .support-content .content-questions {
+    align-items: center;
+    text-align: center;
+  }
+}
 .app-cold .support .support-questions {
   display: flex;
   flex-direction: column;
@@ -829,9 +869,20 @@ button {
   margin-top: 20px;
   padding: 1rem 2rem;
 }
+@media (max-width: 390px) {
+  .app-cold .support .support-questions .support-question {
+    font-size: 0.7rem;
+  }
+}
 .app-cold .support .support-questions .support-question h4 {
   font-size: 1.3rem;
   margin-bottom: 20px;
+}
+@media (max-width: 390px) {
+  .app-cold .support .support-questions .support-question h4 {
+    font-size: 0.9rem;
+    padding: 0;
+  }
 }
 .app-cold .support h1 {
   color: rgb(192, 194, 234);
@@ -987,6 +1038,15 @@ button {
   cursor: pointer;
   opacity: 0.9;
 }
+@media (max-width: 390px) {
+  .app-cold .shop-images .single-image {
+    padding: 0.5rem;
+  }
+  .app-cold .shop-images .single-image img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .app-cold .shop-images .popup-image {
   width: 100vw;
   height: 100vh;
@@ -1021,6 +1081,15 @@ button {
 .app-cold .shop-images .popup-image button {
   margin-top: 20px;
   font-size: larger;
+}
+@media (max-width: 390px) {
+  .app-cold .shop-images .popup-image {
+    margin-top: -12rem;
+    padding-top: 8rem;
+  }
+  .app-cold .shop-images .popup-image h3 {
+    font-size: 1rem;
+  }
 }
 .app-cold .shop-images h3 {
   opacity: 0.85;
@@ -1103,6 +1172,14 @@ button {
 }
 .app-cold .settings p:hover {
   opacity: 0.9;
+}
+@media (max-width: 390px) {
+  .app-cold .settings {
+    font-size: 0.7rem;
+  }
+  .app-cold .settings h3 {
+    padding: 0;
+  }
 }
 .app-cold .settings h1 {
   border-top: 1px solid #5C527F;
@@ -1215,6 +1292,11 @@ button {
 .app-cold .follow-list .no-follow {
   margin-top: 13rem;
 }
+@media (max-width: 390px) {
+  .app-cold .follow-list button {
+    font-size: 0.5rem;
+  }
+}
 .app-cold .follow-list a {
   color: #5C527F;
 }
@@ -1292,6 +1374,7 @@ button {
 .app-cold .click-hate-rating {
   width: 100vw;
   height: 200vh;
+  overflow-x: hidden;
   padding: 7rem 5rem;
   display: flex;
   flex-direction: column;
@@ -1376,6 +1459,36 @@ button {
 .app-cold .click-hate-rating .click-hate-follow-section button {
   font-size: 1.3rem;
   border-radius: 10px;
+}
+@media (max-width: 390px) {
+  .app-cold .click-hate-rating .click-hate-top-9 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .app-cold .click-hate-rating .click-hate-top-9 .click-hate-card {
+    padding: 1.2rem 0.8rem;
+    margin-left: 1px;
+  }
+  .app-cold .click-hate-rating h1, .app-cold .click-hate-rating h2 {
+    font-size: 1.4rem;
+  }
+  .app-cold .click-hate-rating h3:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+  .app-cold .click-hate-rating h3 {
+    font-size: 0.8rem;
+  }
+  .app-cold .click-hate-rating .winner {
+    padding: 0.7rem;
+    font-size: 1.2rem;
+  }
+  .app-cold .click-hate-rating .winner img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .app-cold .click-hate-rating .winner p {
+    font-size: 1.2rem;
+  }
 }
 .app-cold .click-hate-rating a {
   color: #d1d1d1;
@@ -1663,6 +1776,7 @@ button {
   transition: transform 0.25s ease;
   width: 80%;
   max-width: 600px;
+  min-width: 180px;
   margin-bottom: 1.3rem;
 }
 .app-cold .signup .form-input:hover {
@@ -1670,6 +1784,11 @@ button {
 }
 .app-cold .signup .form-input:focus {
   transform: scale(98.5%);
+}
+@media (max-width: 390px) {
+  .app-cold .signup .form-input {
+    width: 200px;
+  }
 }
 .app-cold .signup .form-btn {
   border: 0;
@@ -1689,8 +1808,13 @@ button {
 .app-cold .signup .form-btn:active {
   transform: scale(95%);
 }
+@media (max-width: 390px) {
+  .app-cold .signup {
+    padding-top: 1rem;
+  }
+}
 .app-cold .signup .form-welcome-text {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 .app-cold .signup span {
   margin-left: 10px;
@@ -1773,7 +1897,6 @@ button {
   flex-direction: column;
   padding: 4rem 8rem;
   align-items: center;
-  height: 100vh;
   width: 100vw;
   color: #5a59a3;
   background-color: #302e35;
@@ -1787,6 +1910,7 @@ button {
   transition: transform 0.25s ease;
   width: 80%;
   max-width: 600px;
+  min-width: 180px;
   margin-bottom: 1.3rem;
 }
 .app-cold .login .form-input:hover {
@@ -1794,6 +1918,11 @@ button {
 }
 .app-cold .login .form-input:focus {
   transform: scale(98.5%);
+}
+@media (max-width: 390px) {
+  .app-cold .login .form-input {
+    width: 200px;
+  }
 }
 .app-cold .login .form-btn {
   border: 0;
@@ -1812,6 +1941,11 @@ button {
 }
 .app-cold .login .form-btn:active {
   transform: scale(95%);
+}
+@media (max-width: 390px) {
+  .app-cold .login {
+    padding-top: 1rem;
+  }
 }
 .app-cold .login .form-text {
   display: flex;
@@ -1908,6 +2042,8 @@ button {
   padding-bottom: 20px;
   padding-top: 6rem;
   align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: #1a1919;
 }
 .app-hot .home-page a {
@@ -2095,6 +2231,11 @@ button {
 .app-hot .profile .user-info-prof .span:hover {
   cursor: pointer;
 }
+@media (max-width: 390px) {
+  .app-hot .profile .user-info-prof {
+    font-size: 0.7rem;
+  }
+}
 .app-hot .profile .profile-img {
   background-color: #1a1919;
 }
@@ -2133,6 +2274,11 @@ button {
 }
 .app-hot .profile-options .profile-option:hover, .app-hot .profile-options .profile-option-chosen:hover {
   cursor: pointer;
+}
+@media (max-width: 390px) {
+  .app-hot .profile-options {
+    font-size: 0.7rem;
+  }
 }
 .app-hot .profile-options .profile-option:hover {
   background-color: #1d1d1d;
@@ -2212,6 +2358,12 @@ button {
   width: 100%;
   max-width: 1200px;
 }
+@media (max-width: 390px) {
+  .app-hot .support .support-content {
+    margin-left: -2rem;
+    align-items: center;
+  }
+}
 .app-hot .support .support-content .content-header {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2230,6 +2382,12 @@ button {
   text-align: left;
   margin-left: 40px;
 }
+@media (max-width: 390px) {
+  .app-hot .support .support-content .content-questions {
+    align-items: center;
+    text-align: center;
+  }
+}
 .app-hot .support .support-questions {
   display: flex;
   flex-direction: column;
@@ -2247,9 +2405,20 @@ button {
   margin-top: 20px;
   padding: 1rem 2rem;
 }
+@media (max-width: 390px) {
+  .app-hot .support .support-questions .support-question {
+    font-size: 0.7rem;
+  }
+}
 .app-hot .support .support-questions .support-question h4 {
   font-size: 1.3rem;
   margin-bottom: 20px;
+}
+@media (max-width: 390px) {
+  .app-hot .support .support-questions .support-question h4 {
+    font-size: 0.9rem;
+    padding: 0;
+  }
 }
 .app-hot .support h1 {
   color: #950101;
@@ -2384,6 +2553,15 @@ button {
   cursor: pointer;
   opacity: 0.9;
 }
+@media (max-width: 390px) {
+  .app-hot .shop-images .single-image {
+    padding: 0.5rem;
+  }
+  .app-hot .shop-images .single-image img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .app-hot .shop-images .popup-image {
   width: 100vw;
   height: 100vh;
@@ -2418,6 +2596,15 @@ button {
 .app-hot .shop-images .popup-image button {
   margin-top: 20px;
   font-size: larger;
+}
+@media (max-width: 390px) {
+  .app-hot .shop-images .popup-image {
+    margin-top: -12rem;
+    padding-top: 8rem;
+  }
+  .app-hot .shop-images .popup-image h3 {
+    font-size: 1rem;
+  }
 }
 .app-hot .shop-images h3 {
   color: #7c1515;
@@ -2522,6 +2709,14 @@ button {
 }
 .app-hot .settings p:hover {
   opacity: 0.9;
+}
+@media (max-width: 390px) {
+  .app-hot .settings {
+    font-size: 0.7rem;
+  }
+  .app-hot .settings h3 {
+    padding: 0;
+  }
 }
 .app-hot .settings h2 {
   color: #950101;
@@ -2632,6 +2827,11 @@ button {
 .app-hot .follow-list .no-follow {
   margin-top: 13rem;
 }
+@media (max-width: 390px) {
+  .app-hot .follow-list button {
+    font-size: 0.5rem;
+  }
+}
 .app-hot .follow-list a {
   color: #950101;
 }
@@ -2709,6 +2909,7 @@ button {
 .app-hot .click-hate-rating {
   width: 100vw;
   height: 200vh;
+  overflow-x: hidden;
   padding: 7rem 5rem;
   display: flex;
   flex-direction: column;
@@ -2793,6 +2994,36 @@ button {
 .app-hot .click-hate-rating .click-hate-follow-section button {
   font-size: 1.3rem;
   border-radius: 10px;
+}
+@media (max-width: 390px) {
+  .app-hot .click-hate-rating .click-hate-top-9 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .app-hot .click-hate-rating .click-hate-top-9 .click-hate-card {
+    padding: 1.2rem 0.8rem;
+    margin-left: 1px;
+  }
+  .app-hot .click-hate-rating h1, .app-hot .click-hate-rating h2 {
+    font-size: 1.4rem;
+  }
+  .app-hot .click-hate-rating h3:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+  .app-hot .click-hate-rating h3 {
+    font-size: 0.8rem;
+  }
+  .app-hot .click-hate-rating .winner {
+    padding: 0.7rem;
+    font-size: 1.2rem;
+  }
+  .app-hot .click-hate-rating .winner img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .app-hot .click-hate-rating .winner p {
+    font-size: 1.2rem;
+  }
 }
 .app-hot .click-hate-rating a {
   color: #7c1515;
@@ -3078,6 +3309,7 @@ button {
   transition: transform 0.25s ease;
   width: 80%;
   max-width: 600px;
+  min-width: 180px;
   margin-bottom: 1.3rem;
 }
 .app-hot .signup .form-input:hover {
@@ -3085,6 +3317,11 @@ button {
 }
 .app-hot .signup .form-input:focus {
   transform: scale(98.5%);
+}
+@media (max-width: 390px) {
+  .app-hot .signup .form-input {
+    width: 200px;
+  }
 }
 .app-hot .signup .form-btn {
   border: 0;
@@ -3104,8 +3341,13 @@ button {
 .app-hot .signup .form-btn:active {
   transform: scale(95%);
 }
+@media (max-width: 390px) {
+  .app-hot .signup {
+    padding-top: 1rem;
+  }
+}
 .app-hot .signup .form-welcome-text {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 .app-hot .signup span {
   margin-left: 10px;
@@ -3188,7 +3430,6 @@ button {
   flex-direction: column;
   padding: 4rem 8rem;
   align-items: center;
-  height: 100vh;
   width: 100vw;
   color: #950101;
 }
@@ -3201,6 +3442,7 @@ button {
   transition: transform 0.25s ease;
   width: 80%;
   max-width: 600px;
+  min-width: 180px;
   margin-bottom: 1.3rem;
 }
 .app-hot .login .form-input:hover {
@@ -3208,6 +3450,11 @@ button {
 }
 .app-hot .login .form-input:focus {
   transform: scale(98.5%);
+}
+@media (max-width: 390px) {
+  .app-hot .login .form-input {
+    width: 200px;
+  }
 }
 .app-hot .login .form-btn {
   border: 0;
@@ -3226,6 +3473,11 @@ button {
 }
 .app-hot .login .form-btn:active {
   transform: scale(95%);
+}
+@media (max-width: 390px) {
+  .app-hot .login {
+    padding-top: 1rem;
+  }
 }
 .app-hot .login .form-text {
   display: flex;

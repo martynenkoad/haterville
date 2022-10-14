@@ -17,4 +17,8 @@
             cursor: pointer;
         }
     }
+
+    @media(max-width: 390px) {
+        font-size: 0.7rem;
+    }
 }

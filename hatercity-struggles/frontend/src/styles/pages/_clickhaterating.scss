@@ -2,6 +2,7 @@
 @mixin click-hate-rating {
     width: 100vw;
     height: 200vh;
+    overflow-x: hidden;
     padding: 7rem 5rem;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,6 @@
             padding: 1.2rem 0.8rem;
             border-radius: 12px;
             margin-left: 10px;
-            
         }
     }
     h4::before { content: '@'; }
@@ -66,5 +66,35 @@
             border-radius: 10px;
         }
 
+    }
+    @media(max-width: 390px) {
+        .click-hate-top-9 {
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .click-hate-card {
+                padding: 1.2rem 0.8rem;
+                margin-left: 1px;
+            }
+        }
+        h1, h2 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            &:nth-of-type(2) {
+                font-size: 1.4rem;
+            }
+        }
+        h3 {
+            font-size: 0.8rem;
+        }
+        .winner {
+            padding: 0.7rem;
+            font-size: 1.2rem;
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+            p { font-size: 1.2rem; }
+        }
     }
 }

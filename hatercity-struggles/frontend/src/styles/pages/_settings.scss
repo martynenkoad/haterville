@@ -67,6 +67,10 @@
             opacity: 0.9;
         }
     }
+    @media (max-width:390px) {
+        font-size: 0.7rem;
+        h3 { padding: 0; }
+    }
 }
 
 .material-symbols-outlined {

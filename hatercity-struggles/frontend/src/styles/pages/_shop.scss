@@ -41,6 +41,13 @@
                 opacity: 0.9;
             }
         }
+        @media (max-width: 390px) {
+            padding: 0.5rem;
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
     }
     .popup-image {
         width: 100vw;
@@ -75,6 +82,11 @@
         button {
             margin-top: 20px;
             font-size: larger;
+        }
+        @media (max-width: 390px) {
+            margin-top: -12rem;
+            padding-top: 8rem;
+            h3 { font-size: 1rem; }
         }
     }
     

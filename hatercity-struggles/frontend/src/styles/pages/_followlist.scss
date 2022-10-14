@@ -32,4 +32,9 @@
     .no-follow {
         margin-top: 13rem;
     }
+    @media (max-width: 390px) {
+        button {
+            font-size: 0.5rem;
+        }
+    }
 }

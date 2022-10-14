@@ -21,6 +21,8 @@
     top: 6.5rem;
     user-select: none;
 
+    
+
     &:hover {
         cursor:pointer;
         opacity: 80%;
@@ -30,6 +32,9 @@
 
 .sidebar-opt {
     left: 23%;
+    @media(max-width: 390px) {
+      left: 35%; 
+    }
 }
 
 /* Sidebar Styles */
