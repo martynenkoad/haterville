@@ -56,7 +56,7 @@ button {
 }
 @media (max-width: 390px) {
   body {
-    display: none;
+    // display: none;
   }
 }
 /* Navbar (Header) Styles */ /* Basic Button */
