@@ -125,7 +125,7 @@ export default function Signup() {
             />
             <span className="input-length">{description.length}/320</span>
             <button disabled={isLoading} className="form-btn">Ready!</button>
-            {error && <div className="error">{ error }</div>}
+            {error && <div className="error">{ error.message }</div>}
         </form>
     )
 }
